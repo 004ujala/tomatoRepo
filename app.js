@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
-const port = 8000;
+const port = process.env.PORT || 8000;
 const connectDB = require("./config/db");
 connectDB();
 const FarmerModel = require("./models/farmerModel");
